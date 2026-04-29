@@ -1,0 +1,238 @@
+:root {
+    --tournament-blue: #006699;
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #888888;
+    --dark-bg: #0a0a0a; /* Sehr tiefes Schwarz für maximalen Kontrast */
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 0;
+    z-index: 10;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+    color: var(--white);
+}
+
+.nav-socials a {
+    color: var(--white);
+    font-size: 2.4rem;
+    transition: color 0.3s ease;
+}
+
+.nav-socials a:hover {
+    color: var(--tournament-blue);
+}
+
+/* Hero Section */
+
+.hero {
+    height: 100vh;
+    /* Erst der Gradient (liegt oben), dann das Bild (liegt unten) */
+    background:
+            linear-gradient(to bottom, rgba(10, 10, 10, 0) 90%, rgba(10, 10, 10, 1) 100%),
+            url('hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 8vh;
+    position: relative;
+}
+
+
+.main-slogan {
+    color: var(--white);
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 0.85;
+    letter-spacing: -3px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.main-slogan .thin {
+    font-weight: 400;
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+    opacity: 0.9;
+}
+
+/* Section Logic */
+section {
+    padding: 15rem 0;
+    width: 100%;
+}
+
+.section-white { background-color: var(--white); color: var(--black); }
+.section-dark { background-color: var(--dark-bg); color: var(--white); }
+
+/* Typography & Accents */
+.section-label {
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 8rem;
+}
+
+.section-label-accent {
+    color: var(--tournament-blue); /* Dezent eingesetztes Blau */
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 4rem;
+    display: block;
+}
+
+.section-label-light {
+    color: var(--white);
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 8rem;
+}
+
+.large-text {
+    font-size: 2.4rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.text-center { text-align: center; }
+
+/* Career Grid Highlights */
+.highlight-item {
+    border-top: 2px solid var(--tournament-blue); /* Blau als feine Trennlinie */
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.highlight-item.dark-border {
+    border-top: 2px solid var(--tournament-blue);
+}
+
+.section-white .highlight-item {
+    border-top: 2px solid var(--black); /* Kontrast im weißen Bereich */
+}
+
+.highlight-item strong {
+    font-size: 2.4rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Career Highlights Liste - Absolut Minimalistisch */
+.achievement-list {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 1.5rem;
+    padding-left: 0; /* Sicherstellen, dass nichts eingerückt ist */
+}
+
+.achievement-list li {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0.8rem; /* Etwas mehr Luft zum Atmen ohne Strich */
+    color: var(--black);   /* Voller Kontrast */
+    font-weight: 400;
+    text-transform: none;  /* Falls Milligram hier transformieren will */
+}
+
+/* Das Jahr als dominanter Anker */
+.highlight-item strong {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    display: block;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+/* Die Trennlinie über dem Jahr - hier nutzen wir den Akzent dezent */
+.section-white .highlight-item {
+    border-top: 2px solid var(--black);
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+/* Partner Grid */
+.partner-logo {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.4s ease;
+    padding: 2rem;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.site-footer {
+    padding: 6rem 0;
+    background-color: var(--white);
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.footer-links li { margin-left: 4rem; margin-bottom: 0; }
+.footer-links a { color: var(--grey); font-size: 1.2rem; text-decoration: none; }
+.footer-links a:hover { color: var(--tournament-blue); }
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .main-slogan { font-size: 4rem; }
+    .main-slogan .thin { font-size: 2.2rem; }
+    section { padding: 8rem 0; }
+    .large-text { font-size: 1.8rem; }
+    .footer-content { flex-direction: column; gap: 2rem; }
+    .footer-links { padding: 0; justify-content: center; }
+    .footer-links li { margin: 0 1.5rem; }
+}
+
