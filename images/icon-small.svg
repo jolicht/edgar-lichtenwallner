@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
+   sodipodi:docname="icon-small.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.1099335"
+     inkscape:cx="272.53886"
+     inkscape:cy="183.34433"
+     inkscape:window-width="1854"
+     inkscape:window-height="1131"
+     inkscape:window-x="1986"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#0e232e;fill-opacity:1;stroke:#92cd66;stroke-width:0.132292;stroke-linecap:round;stroke-linejoin:round"
+       id="rect3"
+       width="135.46666"
+       height="135.46666"
+       x="0.066146001"
+       y="0.066146001" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:87.8501px;line-height:1.25;font-family:'Inter 18pt';-inkscape-font-specification:'Inter 18pt, Bold';font-variant-ligatures:none;text-align:center;letter-spacing:-5.22975px;text-anchor:middle;fill:#ffffff;stroke-width:1.17656"
+       x="65.009972"
+       y="98.480736"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:'Montserrat Ultra-Bold';letter-spacing:-5.22975px;fill:#ffffff;stroke-width:1.17656"
+         x="62.395096"
+         y="98.480736"
+         dx="0">EL</tspan></text>
+  </g>
+</svg>
