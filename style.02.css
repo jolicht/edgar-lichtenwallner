@@ -1,8 +1,9 @@
 :root {
     --tournament-blue: #006699;
+    --accent-on-dark: #3399cc;
     --black: #000000;
     --white: #ffffff;
-    --grey: #888888;
+    --grey: #666666;
     --dark-bg: #0a0a0a; /* Sehr tiefes Schwarz für maximalen Kontrast */
 }
 
@@ -37,19 +38,30 @@ body {
 }
 
 .nav-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
     color: var(--white);
     font-size: 2.4rem;
     transition: color 0.3s ease;
 }
 
 .nav-socials a:hover {
-    color: var(--tournament-blue);
+    color: var(--accent-on-dark);
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
 }
 
 /* Hero Section */
 
 .hero {
     height: 100vh;
+    height: 100svh;
     /* Erst der Gradient (liegt oben), dann das Bild (liegt unten) */
     background:
             linear-gradient(to bottom, rgba(10, 10, 10, 0) 90%, rgba(10, 10, 10, 1) 100%),
@@ -98,7 +110,7 @@ section {
 }
 
 .section-label-accent {
-    color: var(--tournament-blue); /* Dezent eingesetztes Blau */
+    color: var(--accent-on-dark);
     font-weight: 900;
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -125,23 +137,32 @@ section {
 .text-center { text-align: center; }
 
 /* Career Grid Highlights */
+#career .row {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    margin-left: 0;
+    width: 100%;
+}
+
+#career .row > .column {
+    padding: 0;
+    min-width: 0;
+}
+
 .highlight-item {
-    border-top: 2px solid var(--tournament-blue); /* Blau als feine Trennlinie */
+    border-top: 2px solid var(--black);
     padding-top: 2rem;
+    margin-top: 2rem;
     margin-bottom: 4rem;
 }
 
-.highlight-item.dark-border {
-    border-top: 2px solid var(--tournament-blue);
-}
-
-.section-white .highlight-item {
-    border-top: 2px solid var(--black); /* Kontrast im weißen Bereich */
-}
-
 .highlight-item strong {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -1px;
     display: block;
+    color: var(--black);
     margin-bottom: 1rem;
 }
 
@@ -162,36 +183,15 @@ section {
     text-transform: none;  /* Falls Milligram hier transformieren will */
 }
 
-/* Das Jahr als dominanter Anker */
-.highlight-item strong {
-    font-size: 2.8rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-    display: block;
-    color: var(--black);
-    margin-bottom: 1rem;
-}
-
-/* Die Trennlinie über dem Jahr - hier nutzen wir den Akzent dezent */
-.section-white .highlight-item {
-    border-top: 2px solid var(--black);
-    padding-top: 2rem;
-    margin-top: 2rem;
-}
-
 /* Partner Grid */
 .partner-logo {
     max-width: 100%;
     height: auto;
-
-
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease;
     padding: 2rem;
 }
 
 .partner-logo:hover {
-
-
     transform: scale(1.05);
 }
 
@@ -226,7 +226,17 @@ section {
 
 /* Responsive */
 
+@media (min-width: 640px) {
+    #career .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+    #career .row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
 @media (max-width: 600px) {
+    .hero { background-position: center, 35% center; }
+    .brand { font-size: clamp(1.6rem, 5.5vw, 2.2rem); }
     .main-slogan { font-size: 4rem; }
     .main-slogan .thin { font-size: 2.2rem; }
     section { padding: 8rem 0; }
@@ -236,6 +246,10 @@ section {
     .footer-links li { margin: 0 1.5rem; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .partner-logo { transition: none; }
+    .partner-logo:hover { transform: none; }
+}
 
 .milestone {
     margin-top: 0.75rem;
